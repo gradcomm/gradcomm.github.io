@@ -1,6 +1,6 @@
 define(['text!templates/counter.html.tpl'],
     function(tpl) {
-        var IRS_DATE = new Date(2017, 2, 4);
+        var IRS_DATE = new Date(2017, 1, 4);
 
         return Backbone.View.extend({
             template: _.template(tpl),
