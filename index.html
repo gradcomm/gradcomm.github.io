@@ -4,7 +4,6 @@
     <link href='styles/main.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
-    <h1> Gradcomm 2017 </h1>
     <div class="main">
         <!-- Content will be rendered here --> 
     </div>
@@ -14,6 +13,27 @@
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/underscore/underscore-min.js"></script>
     <script src="node_modules/backbone/backbone-min.js"></script>
+
+    <!-- Twitter JS -->
+    <script>
+        window.twttr = (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
+                t = window.twttr || {};
+
+             if (d.getElementById(id)) return t;
+             js = d.createElement(s);
+             js.id = id;
+             js.src = "https://platform.twitter.com/widgets.js";
+             fjs.parentNode.insertBefore(js, fjs);
+                         
+             t._e = [];
+             t.ready = function(f) {
+                 t._e.push(f);
+             };
+
+             return t;
+        }(document, "script", "twitter-wjs"));
+    </script>
 
     <!-- Main Script -->
     <script data-main="src/app" src="src/require.js"></script>

@@ -4,11 +4,18 @@ requirejs.config({
         text: '../node_modules/text/text',
         views: './views',
         templates: './templates',
+        data: './data',
     },
 });
 
-requirejs(['views/main'],
-    function(MainView) {
-        window.mainView = new MainView({el: $('.main')});
+requirejs(['route', 'views/main'],
+    function(Route, MainView) {
+        var App = function() {
+            this.routes = new Route();
+
+            Backbone.history.start();
+        }
+
+        window.bTask = new App();
     });
 

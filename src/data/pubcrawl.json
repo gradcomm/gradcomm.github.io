@@ -1,0 +1,53 @@
+[
+    {
+        "_comment": "All the schedule items should follow this format",
+        "date": "May 23, 2016",
+        "stops": [
+            {
+                "location": "Molly Bloom's",
+                "start": "10:30 PM",
+                "end": "11:00 PM"
+            },
+            {
+                "location": "Kickoffs",
+                "start": "11:00 PM",
+                "end": "12:00 PM"
+            },
+            {
+                "location": "Chainsaw",
+                "start": "12:00 PM",
+                "end": "1:00 AM"
+            }
+        ]
+    },
+    {
+        "date": "May 27, 2016",
+        "stops": [
+
+        ]
+    },
+    {
+        "date": "June 17, 2016",
+        "stops": [
+
+        ]
+    },
+    {
+        "date": "July 1, 2016",
+        "stops": [
+
+        ]
+    },
+    {
+        "date": "July 15, 2016",
+        "stops": [
+
+        ]
+    },
+    {
+        "date": "July 29, 2016",
+        "stops": [
+
+        ]
+    }
+]
