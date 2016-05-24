@@ -1,7 +1,7 @@
 [
     {
         "_comment": "All the schedule items should follow this format",
-        "date": "May 23, 2016",
+        "date": "May 13, 2016",
         "stops": [
             {
                 "location": "Molly Bloom's",
@@ -11,11 +11,11 @@
             {
                 "location": "Kickoffs",
                 "start": "11:00 PM",
-                "end": "12:00 PM"
+                "end": "12:00 AM"
             },
             {
                 "location": "Chainsaw",
-                "start": "12:00 PM",
+                "start": "12:00 AM",
                 "end": "1:00 AM"
             }
         ]

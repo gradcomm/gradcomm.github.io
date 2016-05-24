@@ -119,7 +119,19 @@ body {
     }
 
     .division-header {
-        font-size: 36px;
+        font-size: 52px;
         text-align: center;
+    }
+        
+    .crawl-stop {
+        font-size: 40px;    
+    }
+
+    .stop-location {
+        font-size: 44px; 
+    }
+
+    .next-crawl {
+        font-size: 40px;
     }
 }

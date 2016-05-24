@@ -73,7 +73,11 @@ define([
 
             getCurrentSchedule: function() {
                 return _.find(this.pubcrawlData, function(crawl) {
-                    return new Date(crawl.date).getDate() >= new Date().getDate();
+                    var crawlDate = new Date(crawl.date);
+                    var currentDate = new Date();
+
+                    return currentDate.getMonth() <= crawlDate.getMonth() &&
+                           currentDate.getDate() <= (crawlDate.getDate() + 1);
                 });
             },
 
@@ -86,11 +90,11 @@ define([
                     var endTime = new Date(currentSchedule.date + ' ' + stop.end);
 
                     if (stop.start.indexOf('AM') > -1) {
-                        startTime += 1000 * 3600 * 24;
+                        startTime.setHours(startTime.getHours() + 24);
                     }
 
                     if (stop.end.indexOf('AM') > -1) {
-                        endTime += 1000 * 3600 * 24;
+                        endTime.setHours(endTime.getHours() + 24);
                     }
 
 
@@ -111,7 +115,7 @@ define([
                 var startTime = new Date(currentSchedule.date + ' ' + firstStop.start);
 
                 if (firstStop.start.indexOf('AM') > -1) {
-                    startTime += 1000 * 3600 * 24;
+                    startTime.setHours(startTime.getHours() + 24);
                 }
 
                 var timeDiff = new Date(null);
