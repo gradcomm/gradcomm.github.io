@@ -112,6 +112,11 @@ define([
             getCountdownTime: function() {
                 var currentSchedule = this.getCurrentSchedule();
                 var firstStop = currentSchedule.stops[0];
+
+                if (!firstStop) {
+                    return "Soon&trade;";
+                }
+
                 var startTime = new Date(currentSchedule.date + ' ' + firstStop.start);
 
                 if (firstStop.start.indexOf('AM') > -1) {
