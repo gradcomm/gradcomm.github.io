@@ -44,9 +44,14 @@
                 "end": "11:30 PM"
             },
             {
+                "location": "Stark & Perri",
+                "start": "11:30 PM",
+                "end": "12:30 AM"
+            },
+            {
                 "location": "Chainsaw",
                 "start": "11:30 PM",
-                "end": "3:00 AM"
+                "end": "2:00 AM"
             }
         ]
     },
