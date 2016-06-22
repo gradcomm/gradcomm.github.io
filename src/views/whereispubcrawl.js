@@ -1,9 +1,10 @@
 define([
+    'moment',
     'text!templates/whereispubcrawl.html.tpl',
     'text!templates/crawlstopitem.html.tpl',
-    'text!data/pubcrawl.json'
+    'text!data/pubcrawl.json',
     ],
-    function(tpl, crawlStopItemTpl, pubcrawlData) {
+    function(moment, tpl, crawlStopItemTpl, pubcrawlData) {
         return Backbone.View.extend({
             template: _.template(tpl),
             pubcrawlData: JSON.parse(pubcrawlData),
@@ -73,33 +74,33 @@ define([
 
             getCurrentSchedule: function() {
                 return _.find(this.pubcrawlData, function(crawl) {
-                    var crawlDate = new Date(crawl.date);
-                    var currentDate = new Date();
+                    var crawlDate = moment(crawl.date);
+                    var currentDate = moment();
 
-                    return currentDate.getMonth() <= crawlDate.getMonth() &&
-                           currentDate.getDate() <= (crawlDate.getDate() + 1);
+                    return currentDate.isSameOrBefore(crawlDate, 'd');
+
                 });
             },
 
             getCurrentStop: function() {
                 var currentSchedule = this.getCurrentSchedule();
-                var currentTime = Date.now()
+                var currentTime = moment();
 
                 var currentStop = _.find(currentSchedule.stops, function(stop) {
-                    var startTime = new Date(currentSchedule.date + ' ' + stop.start);
-                    var endTime = new Date(currentSchedule.date + ' ' + stop.end);
+                    var startTime = moment(currentSchedule.date + ' ' + stop.start);
+                    var endTime = moment(currentSchedule.date + ' ' + stop.end);
 
                     if (stop.start.indexOf('AM') > -1) {
-                        startTime.setHours(startTime.getHours() + 24);
+                        startTime.add(1, 'd');
                     }
 
                     if (stop.end.indexOf('AM') > -1) {
-                        endTime.setHours(endTime.getHours() + 24);
+                        endTime.add(1, 'd');
                     }
 
 
-                    return currentTime >  startTime &&
-                           currentTime <= endTime;
+                    return currentTime.isSameOrAfter(startTime) &&
+                           currentTime.isSameOrBefore(endTime);
                 });
 
                 return currentStop;

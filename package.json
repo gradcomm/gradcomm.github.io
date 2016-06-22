@@ -4,7 +4,8 @@
   "description": "The official site for the University of Waterloo 2017 Engineering Graduating Class.",
   "main": "index.html",
   "dependencies": {
-    "backbone": "^1.3.3"
+    "backbone": "^1.3.3",
+    "moment": "^2.13.0"
   },
   "devDependencies": {},
   "scripts": {
