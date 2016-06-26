@@ -1,6 +1,6 @@
-define(['text!templates/counter.html.tpl'],
-    function(tpl) {
-        var IRS_DATE = new Date(2017, 1, 4);
+define(['moment', 'text!templates/counter.html.tpl'],
+    function(moment, tpl) {
+        var IRS_DATE = moment('February 4, 2017');
 
         return Backbone.View.extend({
             template: _.template(tpl),
@@ -17,7 +17,7 @@ define(['text!templates/counter.html.tpl'],
             },
 
             getCountdownDays: function() {
-                return Math.floor((IRS_DATE - Date.now()) / 1000 / 60 / 60 / 24);
+                return Math.ceil(moment.duration(IRS_DATE.diff(moment())).asDays());
             },
 
             render: function() {
