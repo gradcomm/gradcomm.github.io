@@ -1,6 +1,7 @@
 requirejs.config({
     baseUrl: 'src',
     paths: {
+        moment: '../node_modules/moment/moment',
         text: '../node_modules/text/text',
         views: './views',
         templates: './templates',
