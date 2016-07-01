@@ -1,3 +1,4 @@
+<title>Where is Pubcrawl?</title>
 <link rel="stylesheet" href="styles/whereispubcrawl.css"/>
 
 <div class="header"> 
