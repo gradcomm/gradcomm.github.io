@@ -108,7 +108,26 @@
     {
         "date": "July 15, 2016",
         "stops": [
-
+            {
+                "location": "The Museum",
+                "start": "4:30 PM",
+                "end": "6:30 PM"
+            },
+            {
+                "location": "Rib & Beer Festivial @ Victora Park",
+                "start": "6:30 PM",
+                "end": "8:30 PM"
+            },
+            {
+                "location": "Bobby O'Briens",
+                "start": "8:30 PM",
+                "end": "10:30 PM"
+            },
+            {
+                "location": "10:30 PM",
+                "start": "10:30 PM",
+                "end": "2:00 AM"
+            }
         ]
     },
     {
