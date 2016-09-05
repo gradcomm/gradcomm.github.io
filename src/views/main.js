@@ -1,5 +1,9 @@
-define(['views/counter', 'text!templates/main.html.tpl'],
-    function(Counter, tpl) {
+define([
+    'views/counter',
+    'views/announcements',
+    'text!templates/main.html.tpl'
+    ],
+    function(Counter, Announcements, tpl) {
         return Backbone.View.extend({
             template: _.template(tpl),
 
@@ -8,6 +12,7 @@ define(['views/counter', 'text!templates/main.html.tpl'],
             initialize: function() {
                 this.render();
                 this.subviews.push(new Counter({el: this.$('.counter')}));
+                this.subviews.push(new Announcements({el: this.$('.announcements-container')}));
                 this.renderSubviews();
                 return this;
             },

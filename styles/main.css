@@ -46,3 +46,21 @@ body {
     margin: 80px 200px 0px 200px;
 }
 
+.announcement {
+    margin-left: 20px;
+    margin-bottom: 16px;
+}
+
+.announcement-header {
+    margin-bottom: 8px
+}
+
+.announcement-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.announcement-body {
+    margin-left: 20px;
+}
+

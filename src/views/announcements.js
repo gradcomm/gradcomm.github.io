@@ -3,17 +3,24 @@ define([
     'text!data/announcements.json'
     ],
     function(tpl, announcementData) {
-        return Backbone.view.extend({
-            template: _template(tpl),
+        return Backbone.View.extend({
+            template: _.template(tpl),
             announcementData: JSON.parse(announcementData),
 
             initialize: function() {
-                this.render();
                 return this;
             },
 
             render: function() {
+                var self = this;
+                var html = '';
 
+                this.announcementData.forEach(function(announcement) {
+                    html += self.template(announcement);
+                });
+
+                this.$el.html(html);
+                return this;
             },
         });
     });
