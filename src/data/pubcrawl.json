@@ -135,5 +135,46 @@
         "stops": [
 
         ]
+    },
+    {
+        "date": "January 20, 2017",
+        "stops": [
+            {
+                "location": "The Bomber",
+                "start": "1:00 PM",
+                "end": "3:00 PM"
+            },
+            {
+                "location": "Kickoff",
+                "start": "3:00 PM",
+                "end": "5:00 PM"
+            },
+            {
+                "location": "Morty's",
+                "start": "5:00 PM",
+                "end": "7:00 PM"
+            },
+            {
+                "location": "Wilf's",
+                "start": "7:00 PM",
+                "end": "9:00 PM"
+            },
+            {
+                "location": "Pub on King",
+                "start": "9:00 PM",
+                "end": "10:30 PM"
+            },
+            {
+                "location": "Phil's",
+                "start": "9:00 PM",
+                "end": "10:30 PM"
+
+            },
+            {
+                "location": "Chainsaw",
+                "start": "10:30 PM",
+                "end": "2:00 AM"
+            }
+        ]
     }
 ]
