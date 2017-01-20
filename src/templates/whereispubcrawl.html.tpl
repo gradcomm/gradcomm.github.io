@@ -3,7 +3,7 @@
 
 <div class="header"> 
     <div class="banner">
-        <img class="banner-img" src="src/static/banner.png"></img>
+        <img class="banner-img" src="src/static/banner2017.jpg"></img>
     </div>
 </div>
 
